@@ -31,15 +31,17 @@ public class ShopRepository {
         }
         products = tmp;
     }
+
     public void removeById(int id) {
-        if(findById(id)==null){
+        if (findById(id) == null) {
             throw new NotFoundException("Element with id: " + id + " not found");
         }
         remove(id);
     }
+
     public Product findById(int id) {
-        for (Product product : products){
-            if(product.getId() == id){
+        for (Product product : products) {
+            if (product.getId() == id) {
                 return product;
             }
         }
