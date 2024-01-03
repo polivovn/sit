@@ -11,7 +11,7 @@ public class ShopRepositoryTest {
         repo.add(product);
         repo.add(product1);
 
-        Assertions.assertDoesNotThrow(()->{
+        Assertions.assertDoesNotThrow(() -> {
             repo.removeById(2);
         });
 
@@ -19,6 +19,7 @@ public class ShopRepositoryTest {
 //            repo.removeById(2);
 //        });
     }
+
     @Test
     public void shouldTestRemoveByIdNegative() {
         ShopRepository repo = new ShopRepository();
